@@ -37,7 +37,7 @@
     "!dist/**/*.map"
   ],
   "scripts": {
-    "build": "node build.js",
+    "build": "npm install && node build.js",
     "dev": "tsc --watch",
     "dev:cli": "pnpm build && node bin/openspec.js",
     "test": "vitest run",
