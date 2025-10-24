@@ -1,7 +1,6 @@
 import { SlashCommandConfigurator } from './base.js';
 import { SlashCommandId } from '../../templates/index.js';
 import { FileSystemUtils } from '../../../utils/file-system.js';
-import { TemplateManager } from '../../templates/index.js';
 import { OPENSPEC_MARKERS } from '../../config.js';
 
 const FILE_PATHS: Record<SlashCommandId, string> = {
@@ -56,12 +55,6 @@ export class GeminiSlashCommandConfigurator extends SlashCommandConfigurator {
   }
 
   private generateTomlContent(id: SlashCommandId, body: string): string {
-    const commandNames: Record<SlashCommandId, string> = {
-      proposal: 'OpenSpec: Proposal',
-      apply: 'OpenSpec: Apply', 
-      archive: 'OpenSpec: Archive'
-    };
-
     const descriptions: Record<SlashCommandId, string> = {
       proposal: 'Scaffold a new OpenSpec change and validate strictly',
       apply: 'Implement an approved OpenSpec change and keep tasks in sync',

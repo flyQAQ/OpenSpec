@@ -1,7 +1,6 @@
 import { SlashCommandConfigurator } from './base.js';
 import { SlashCommandId } from '../../templates/index.js';
 import { FileSystemUtils } from '../../../utils/file-system.js';
-import { TemplateManager } from '../../templates/index.js';
 import { OPENSPEC_MARKERS } from '../../config.js';
 
 const FILE_PATHS: Record<SlashCommandId, string> = {
